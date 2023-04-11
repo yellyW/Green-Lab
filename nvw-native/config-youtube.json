@@ -1,0 +1,30 @@
+{
+  "type": "native",
+  "devices": ["op2"],
+  "replications": 15,
+  "paths": [
+    "android-runner/apks/com.google.android.youtube.apk"
+  ],
+  "profilers": {
+    "trepn": {
+      "sample_interval": 100,
+      "data_points": ["battery_power"]
+    }
+ },
+  "scripts": {
+    "before_experiment": "dummy/before_experiment.py",
+    "before_run": "dummy/before_run.py",
+    "after_launch": "dummy/after_launch.py",
+    "interaction": [
+      {
+        "type": "monkeyrunner",
+        "path": "youtube/monkeyrunner.py"
+      }
+    ],
+    "before_close": "dummy/before_close.py",
+    "after_run": "dummy/after_run.py",
+    "after_experiment": "dummy/after_experiment.py",
+    "aggregation": "aggregation.py"
+  },
+  "time_between_run": 120000
+}
