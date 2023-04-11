@@ -1,0 +1,33 @@
+\section{Experiment Definition}\label{sec:definition}
+The definition of this experiment is following the GQM (Goal - Questions - Metrics) approach \cite{Basili:1992:SMM:137076}. In this section we define the goal of our experiment, the research questions, and the metrics used to answer those questions.
+
+\subsection{Goal}
+\begin{table}[ht]
+\centering
+\begin{tabular}{||c||} 
+\hline
+\textbf{Experiment Goal Definition}\\
+\hline\hline
+Analyze \textbf{native mobile applications \& mobile web applications} \\ 
+For the purpose of \textbf{evaluation} \\
+With respect to their \textbf{\textcolor{blue}{energy consumption} }\\
+From the point of view of \textbf{software users}\\
+In the context of \textcolor{blue}{\textbf{the most downloaded applications in Google Play store}}\\ [1ex] 
+\hline
+\end{tabular}
+\caption{Experiment goal of GQM}
+\label{tab:goal}
+\end{table}
+Based on the GQM definition pattern, the experiment goal is defined on Table I:. The goal is to evaluate energy consumption of  native and web applications. The energy consumption of the 5 most popular application pairs will be  monitored, thereafter, if time allows, data from up to 15 pairs of applications will be included. The energy consumption of each trial will be measured 20 times, the mean value of energy consumption for each application will be collected. The browser of choice for web applications is Chrome due to it's popularity\cite{Chromestats}. The popularity of the applications are measured by the number of installations from Google Play. \cite{App_statistics} We are aware that this might give us an biased sample since the most popular applications might have a more or less energy efficient applications relative to general applications. The same reasoning goes for the choice of browser and phone, since Chrome and the phone hardware might be significantly different from other browsers or hardware, this might weaken external validity. \textcolor{blue}{But since we focus on maximizing representativeness and raising the feasibility of the experiment we choose to use the browser and its applications in regard to  popularity.} 
+\textcolor{blue}{Finally, the definition of low-end and high-end devices are following the same lines of reasoning as the Mobisoft paper \cite{mobisoft2017}.}
+
+%Further explain why we choose version 6 to be the limit ? 
+
+
+To summarize, we want to analyze native mobile applications and mobile web applications %..(phone apps and browser apps).. 
+for the purpose of evaluation %..(evaluation).. 
+with respect to their energy consumption %..(Energy consumption).. 
+from the point of view of the software users %..(software developer).. 
+in the context of  \textcolor{blue}{ the most downloaded Android applications in Google Play store} %..(Phone usage / thirty phone applications)..?
+
+\input{AppVSweb/Subsections/Questions&Metrics.tex}

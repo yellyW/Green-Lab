@@ -1,0 +1,55 @@
+\subsection{Subject Selection}
+A pilot study of 5 pairs of applications will be carried out to ensure proper measurement values. The first 5 applications to monitor are Facebook, Twitter, YouTube, Instagram and Google Maps which are chosen from the most popular applications from Google Play. If time allows, the following applications will be monitored: NS, Yelp, WhatsApp, Tinder, AccuWeather, Gmail, Amazon, Ebay, Facebook Messenger, PayPal, Google Play Books, ESPN, Netflix, Duolinguo and Uber. All these applications will be used in  a web browser (\textit{Google Chrome}), and, if time allows, on a high-end phone and a low-end phone. This makes this experiment a \textit{technology-oriented} experiment, as characterized by Wholin et al. \cite{wohlin12}
+	%\item Experiment Design
+\subsection{Experiment Design}\label{sec:planning-design}
+%To answer \textbf{RQ1}, we will have to carry out an paired t-test on a one factor, two treatment design ($1\times2$ design) as \autoref{tab:factor1}.
+In order to answer \textbf{RQ1}, we will need one factor, two treatment design with the factor being the type of application. This design is depicted as an $1\times2$ table in \autoref{tab:factor1}. Because we test pairs of applications, we have pairs of results that can best be analyzed with a paired $t$-test, provided that the data is in normal distribution, otherwise the data should be analyzed using a Wilcoxon analysis.
+
+\begin{table}[ht!]
+    \centering
+    \begin{tabular}{|p{0.4\linewidth}|p{0.4\linewidth}|}
+        \hline
+        \multicolumn{2}{|c|}{Factor 1: Application Type}\\
+        \hline
+        \textbf{Native} &  \textbf{Web}\\
+        \hline
+        Energy consumption measurement (20 times) & Energy consumption measurement (20 times)\\
+        \hline
+        
+    \end{tabular}
+    \caption{Design of \textbf{RQ1}}
+    \label{tab:factor1}
+\end{table}
+
+\textbf{RQ2} however, requires us to analyze two factors, the device type and the application type which both have two treatments each, as depicted in the $2\times2$ table \autoref{tab:factor2}. This requires us to use an factorial ANOVA test as we do not only want to asses the main effect of the factors, but also if there is any interaction between them.
+%To answer \textbf{RQ2}, we will have to carry out an factorial ANOVA test on a two factor, two treatment design ($2\times2$ design) as \autoref{tab:factor2}. Two independent variables with 2 levels each requires an factorial ANOVA for analysis. If we decide to only consider one of the independent variables, a T-test will be the choice of analysis. 
+The order of the independent trails will be following randomized experiments design. The confidence interval for acceptance of the hypothesis is set to 95\%. 
+
+For the experiment to be meaningful we had to perform the experiment multiple times per application to exclude external factors. The number of repetitions was set to twenty, because this renders small measurement errors futile and gives us more reliable results. 
+
+
+
+
+\input{AppVSweb/figures/Q2factortable.tex}
+\subsection{Instrumentation}
+
+For replicability purposes a list of monitoring and data collecting instruments and software are listed and explained below.
+
+\subsubsection*{Objects}
+The android device used is an OnePlus 2 \cite{op2}, as this phone is able to provide us with the required data regarding energy consumption. This device can be considered as a high-end device. 
+
+The network infrastructure consists of a WiFi network with a TP-link Archer c2 router \cite{ad7200} using the 802.11ac/n/a standards. The network and router will remain the same throughout the experiment, although the influence on the router settings is limited. The distance from the android device to the router is limited to \textcolor{blue}{at most 5 meters without any obstacles}.
+%\subsubsection*{Guidelines} (Checklist documentation)
+\subsubsection*{Measurements tools}
+
+We use \textbf{Android Runner} \cite{androidrunner} as a power consumption testing framework. It is equipped with support for different types of experiments (e.g. web-based or native), different profiles (e.g. Trepn \cite{trepn} or Battery-stats \cite{batterystats}), performing arbitrary Android debug commands through Android Debug Bridge \cite{adb}, and executing arbitrary user actions via MonkeyRunner \cite{monkeyrunner}. Android Runner is responsible for fully controlling the experiment and tools used for its execution. 
+
+We use \textbf{Trepn Profiler} \cite{trepn} to monitor power consumption statistics and MonkeyRunner to execute the desired actions for each application in each trial. In each experiment run, Android Runner obtains the execution time from the device itself, executes the actions via Monkeyrunner, and the power consumption via Trepn. It controls when each tool starts and finishes working, and ensures that it is happening in the right order.
+
+\textbf{MonkeyRunner} \cite{monkeyrunner} is a tool for developers which enables to control the connected Android device/emulator. It's capable of installing, launching and manipulating apps, as well as taking screen shots. In this case it is used for executing a series of actions such as browsing pictures, clicking on specific points on the screen and then easily reproduce these actions for each treatment of the independent variables of each application. 
+
+\textbf{R} \cite{team2013r} is an Open source data analysis language which is used for analyzing data and performing statistical tests. To run the scripts written in R we use \textbf{RStudio} \cite{team2015rstudio}, that interprets the R language and is able to show visual representations of the actions performed in R. In our case, it is used to check the data for normality and for running the paired $t$-test and ANOVA test  on our data. 
+
+
+
+%\end{itemize}

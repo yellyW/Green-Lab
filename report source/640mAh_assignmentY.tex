@@ -1,0 +1,117 @@
+\documentclass[10pt, conference]{IEEEtran}
+%compsocconf
+\usepackage[bookmarks=true]{hyperref}
+\usepackage{epsfig}
+\usepackage{amsmath,amssymb,amsfonts,latexsym}
+\usepackage{enumerate}
+\usepackage{xspace}
+\usepackage{epsf,picinpar}
+\usepackage{varioref}
+\usepackage{colortbl,multirow,hhline}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{colortbl,multirow,hhline}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{caption}
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{pifont}
+\usepackage{xcolor,colortbl}
+\usepackage{url}
+\usepackage{balance}
+\usepackage{graphicx}
+\usepackage[caption=false]{subfig}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{morefloats}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{pdfpages}
+\usepackage{fancybox}
+\usepackage{amsmath}
+\usepackage{flushend}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx}
+\usepackage{xfrac}
+\usepackage{pdflscape}
+\usepackage{afterpage}
+\usepackage{rotating}
+
+
+\renewcommand{\ttdefault}{cmr}
+
+\newcommand{\limit}[1]{\textcolor{red}{\ding{46}~Page limit:~#1}\\}
+\newcommand{\todo}[1]{\textcolor{blue}{\ding{46}~#1}} 
+\newcommand{\ie}{\emph{i.e.,}\xspace}
+\newcommand{\eg}{\emph{e.g.,}\xspace}
+\newcommand{\etc}{etc.\xspace}
+\newcommand{\etal}{\emph{et~al.}\xspace} 
+    
+\begin{document}
+
+\title{Energy consumption between phone applications and  respective browser applications}
+
+\author{
+\IEEEauthorblockN{Arnaud Moulis}
+\IEEEauthorblockA{2645326\\
+Arnaud.jean.moulis@gmail.com}
+\and
+\IEEEauthorblockN{Paweł Ulita}
+\IEEEauthorblockA{2604357\\
+p.k.ulita@student.vu.nl}
+\and
+\IEEEauthorblockN{Chao Zhang}
+\IEEEauthorblockA{2619800\\
+yellywong7@gmail.com}
+\and
+\IEEEauthorblockN{Robert Zondervan}
+\IEEEauthorblockA{2542732\\
+r.j.zondervan@student.vu.nl}
+}
+
+\maketitle
+
+\begin{abstract}
+\noindent \textit{Context}. 63\% of smartphone users are unsatisfied with the battery life of their devices, which usually is one day or less, and 66\% would pay more money to extend their phones battery life.
+%\todo{at the end}
+
+\noindent \textit{Goal}. This paper is aimed at finding out if there is a significant difference in energy consumption between native mobile applications and mobile web applications, and hence, at finding out if users could extend their battery life by using either native mobile applications or mobile web applications only.
+%\todo{at the end}
+
+\noindent \textit{Method}. To research this, an experiment was performed in which scenarios were run multiple times for a limited number of native mobile applications, and on their mobile web counterparts. The energy consumption per run was measured using the Trepn profiler, and then analyzed.
+%\todo{at the end}
+
+\noindent \textit{Results}. Despite the limited number of applications and some limitations in the way, the energy consumption was measured, and we were able to conclude that there is a difference in energy consumption between native mobile applications and their counter part mobile web applications. %but isn't that more a conclusion than a result?
+%\todo{at the end}
+
+\noindent \textit{Conclusion}
+Our results do answer whether there is a difference between native mobile applications and mobile web applications. We cannot, however, conclude which versions of mobile applications are more energy efficient. Further research is necessary to sufficiently answer this question.
+%\todo{at the end}
+\end{abstract}
+
+\begin{IEEEkeywords}
+Empirical Software Engineering, Green Software, Mobile
+\end{IEEEkeywords}
+
+\input{intro.tex}
+\input{AppVSweb/definition.tex}
+\input{planning.tex} 
+\input{AppVSweb/Subsections/hypothesis.tex}
+\input{AppVSweb/Subsections/planning2.tex}
+\input{execution.tex} 
+\input{results.tex}
+\input{discussion.tex}
+\input{threats.tex}
+\input{conclusion.tex} 
+%\input{appendix.tex} 
+\newpage
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

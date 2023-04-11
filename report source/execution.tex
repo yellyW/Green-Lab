@@ -1,0 +1,36 @@
+\section{Experiment Execution}\label{sec:execution}
+\subsection{\textcolor{blue}{Overview}}
+For each application in the experiment, a trial of common user actions will be executed for each treatment. The native and web application will have an identical navigation pattern or set of actions. The user actions for "Google Maps" could for example be locating a specific point on a map and then search for restaurants in its vicinity. This is done both in the web application and the native application resulting in time and energy consumption for both treatments. Scenarios within application pairs will be executed in random order. 
+
+Testing will be done for up to 20 pairs of applications with batches of 5 applications at a time. This incremental scheme ensures that we can stop the experiment after each each batch of applications, and perform the analysis to ensure that values seems reasonable.
+
+Running the experiment for each application batch will be split into 4 parts: (1) native applications that are executed before their web counterparts, (2) web applications that are executed after their native counterparts, (3) web applications that are executed before their native counterparts, (4) native applications that are executed after their web counterparts.
+
+In case we have enough time to research \textbf{RQ2}, the execution scheme will stay like we have described, but running on a low-end device.
+
+After all execution runs are finished, we are going to preprocess and merge the results using a custom script so that it can be easily used. Later, we will use R to check the assumptions for our data, run the statistical analysis mentioned in \autoref{sec:planning-design}, and generate relevant graphs.
+
+\textcolor{blue}{In our experiment the original web services of the application providers are used. This can influence the validity of the experiment, as we will explain later on.}
+%Report about how you plan to conduct your experiment, what data analysis techniques you will use, etc.
+
+%Pairwise comparison with randomized order if time allows.
+
+
+
+
+%\limit{2}
+
+\subsection{\textcolor{blue}{Scenarios}}
+\textcolor{blue}{
+The descriptions of scenarios for all applications can be found here.}
+
+
+\textcolor{blue}{\textbf{Google Maps}: Look for "Amsterdam". Go to the directions screen. Choose "Rotterdam" as the starting point. Choose "public transport". Look at the first and the second connection. Look for "Café de Dokter". Show the details. Look through the pictures. Look through the reviews.}
+
+\textcolor{blue}{\textbf{Facebook}: Scroll through the feed down and back up. Search for "Forbes". Look through the photos. Look through the videos.}
+
+\textcolor{blue}{\textbf{Twitter}: Scroll through the feed. Look for "\#RickandMorty". Scroll through videos.}
+
+\textcolor{blue}{\textbf{YouTube}: Look for "Rick Astley Never Gonna Give Up". Watch the first video for 10 seconds. Continue watching it for 30 seconds in fullscreen.}
+
+\textcolor{blue}{\textbf{Instagram}: Scroll through the feed. Go to the stories. Click through them.}

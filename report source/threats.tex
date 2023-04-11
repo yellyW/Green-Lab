@@ -1,0 +1,100 @@
+\section{Threats To Validity}\label{sec:threats}
+%Report about each type of threat to the validity of the experiment, according to the classification discussed in class.
+In the following section we identify threats to achieve adequate results. Based on Cook and Campbell \cite{cook1979quasi}, "validity is the extent to which our results are sound and applicable to the real world". There are four types of threats. Their descriptions and the degree of applicability to our experiment are below.
+
+\subsection{Internal Validity}
+Internal validity presents causality between the treatment and the outcome of an experiment. It is strongly related to the experiment design and operation. This means that the outcome is directly affected by the treatment. In our experiment, the casual relation of internal validity is between the choice of native mobile applications versus mobile web applications and energy efficiency.
+
+There are four types of internal validity threat and four ways to mitigate the threats.
+
+\textbf{History}: Even though the whole experiment runs on the same device, the device might react differently to different applications. To mitigate this, we keep the environment unchanged as much as possible. Also, there is only one scenario per application pair, and we run each scenario multiple times.
+
+\textbf{Maturation}: The way subjects react to treatments may change over time. This is mitigated by always using a clean application state for each run.
+
+\textbf{Selection}: There is just 1 Android device, OnePlus 2, which may not generalize well. What is more, using only Wi-Fi does not say anything about whether a cellular connection affects relative energy efficiency. We try to use appropriate experiment design to mitigate this threat. For instance, the applications we chose are among the most downloaded applications in Google Play Store, the number of the trials per treatment is same, and the order of the independent trials will follows the randomized experiments design.
+
+\textbf{Reliability of measurements}: Repeating the measurements should yield similar results, and therefore very similar or the same conclusions. The measurement process should also be correct. Unfortunately, we are affected by both of those issues in a way we cannot mitigate. This problem is described in detail in \autoref{sub:softwareproblems}.
+% How did TA ANSWER this problem.
+
+%Analyze and identify confounding factors/noise.
+%Choose appropriate experiment design.
+%Keep environment under control.
+%Define representative usage scenarios (if needed)
+
+\subsection{External Validity}
+It shows the generalizability of the results and explains how relevant the results are in a wider context. 
+
+There are three types of external validity and two methods to mitigate it.
+
+\textbf{Interaction of selection and treatment}: This threat deals with the selected sample not being representative of the~population of interest. There is a potential risk that the results may not be generalized for all applications. To mitigate this threat, we chose applications that have a high impact on users because they are downloaded very often. This sample is most probably not representative of all applications, but it should be representative of popular applications.
+
+\textbf{Interaction of setting and treatment}: This threat concerns situations where the setting of the experiment does not correspond with reality. Our scenarios, to the best of our knowledge, cover many typical workflows. However, we do not know how representative they are of typical users' actions. To keep the scenarios easily executable in a predictable manner, our workflows do not cover creating content (e.g. taking a picture or typing a longer text) and interacting with other users (e.g. instant messaging).
+
+Unfortunately, due to small differences between the versions of applications, it was not possible to have exactly the same scenarios for both versions of applications. The differences are minimal, and consider how long the total running time and precisely which actions were performed. However, for each pair of applications the scenarios achieve the same goals.
+
+\textbf{Interaction of history and treatment}: This threat is about the experiment being conducted during a specific time which can affect the results, e.g. a specific part of the day or around a special event affecting our subjects. We kept our experiment in an isolated environment and our subjects were applications. The only factors affecting our results could be related to the network unpredictability.
+%Use an environment as realistic as possible
+%Explicitly define and model your context
+
+
+\subsection{Construct Validity}
+It illustrates the relation between effect and outcome from theory and observation perspectives. The experiment treatment and outcome should reflect on the cause and effect in theory.
+
+There are three types of constructive validity threats and three mitigations.
+
+\textbf{Inadequate preoperational explication of constructs}: This kind of threat usually happens before the execution of the experiment. Therefore, we provided a clear definition of the construct (\autoref{fig:GQMtree}).
+
+\textbf{Mono-operation bias}: This happens when there is only a single object or treatment. The final experiment embraced 5 pairs of applications and our independent variable has 2 treatments, so this threat does not apply to our experiment.
+
+
+
+\textbf{Mono-method bias}: This threat is related to a single type of measurements or observations and to the experimenter introducing a bias. In our case using just one application, Trepn, to measure power consumption introduced a bias. This is due to the fact that Trepn was not able to provide precise power consumption values when the device was connected to a computer. This threat is further discussed in \autoref{sub:softwareproblems}.
+
+
+
+
+
+%Early definition of constructs (GQM)
+%Use appropriate experiment design
+%Introduce redundancy for cross-checks
+
+
+\subsection{Conclusion Validity}
+Its focus is on statistical correctness and significance between the treatment and the outcome.
+
+There are three types of conclusion validity threats.
+
+\textbf{Low statistical power}: In order to have sufficient data for analysis, we chose as many applications as we were able within the time frame provided by the course schedule. Eventually, we have were able to run tests for 5 pairs of applications.
+
+%\textbf{Violated assumptions of statistical tests}: \todo{Not done yet}
+
+\textbf{Fishing and error rate}: This threat does not apply to our situation, because we are using only one statistical test.
+
+\subsection{Problems with precise measurements}\label{sub:softwareproblems}
+During the execution of the experiment we were not able to obtain precise power consumption measurements from Trepn. It was possible to measure correct values, but only when the device was not connected to a computer. This transpired to be a fundamental problem, because without connecting the device to a computer we were not able to control the experiment. This is why all results in this experiment are estimated by Trepn.
+
+We are aware that their values are in many situations unrealistic, but we believe that they are informative to a sufficient degree. Our research questions are not focused on absolute values---it is enough for us to know which values differ significantly between pairs. Trepn being an established tool for measuring power consumption reinforces our trust in the relevance of the results.
+
+Unfortunately, we were not able to use Batterystats, the alternative to Trepn. Android Runner's support for it relied on parsing log and output files of several Android tools. This transpired to be impossible to be done in a reliable fashion. We suspect that this was caused by race conditions related to using those auxiliary Android tools asynchronously. 
+
+This brings us to the point where we doubt whether Android Runner is sufficiently trustworthy when it comes to obtaining precise measurements. In many parts of the source code explicit sleep statements are used to control the flow. Also, as far as we know it has not been tested thoroughly with many devices. We have no way of telling whether this introduced any significant bias.
+
+Related to this is the risk of Android Runner being misconfigured. In the first batch of runs, we used a very short pause between the runs: just 500ms. This turned out to be the cause of an enormous variation between our results. Power consumption between runs for one application differed by a factor of 10. This problem was mitigated by setting the pause between runs to 2 minutes. However, there is no way of telling which wrongly set configuration options had a significant impact on the results.
+
+
+%Select appropriate tests
+%Use only as much significance as needed
+
+
+ %   \item measurements of power consumption are incorrect (e.g. because it's connected to a computer and it's charging or the device itself is providing inaccurate values)
+%    \item using just 1 device doesn't generalize well
+%    \item using only Wi-Fi doesn't say anything about cellular data
+%    \item our choice of applications can be not representative (because of which applications we chose and the number of applications)
+ %   \item our scenarios cover many typical workflows, but maybe those workflows aren't representative
+ %   \item workflows don't cover creating content (e.g. taking a picture, typing a longer text) and interacting with other users (e.g. instant messaging)
+ %   \item we use only Google Chrome
+ %   \item Android Runner may introduce bias, because of possible bugs/misconfiguration
+ %   \item there are slight differences in scenarios between native and web due to the applications being a little different - this might introduce a small bias
+
+ 
+%\limit{1 page}

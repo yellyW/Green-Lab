@@ -1,0 +1,29 @@
+\subsection{Hypothesis Formulation}
+%H0 =  There is no any energy reduction from using phone app or browser. 
+% Mean(E:app) = Mean(E:browser)
+%\item Subject Selection
+\textbf{RQ1} - How does energy efficiency ($\mathcal{E}$)  differ between native mobile applications and their mobile web counterparts?
+
+$H_0^1$ - If we label energy consumption for native applications as $\mathcal{E}_n$ and  energy consumption for web applications as $\mathcal{E}_w$, we can define out null hypothesis as follows:
+\newline $H_0^1$        $\mathcal{E}_n = \mathcal{E}_w$\\
+Which in natural language means as much as \textcolor{blue}{ "the energy consumption of mobile native applications is the same as the energy consumption of mobile web applications."}
+
+The alternative hypothesis can be mathematically written down as:
+\newline $H_a^1$      $\mathcal{E}_n \neq \mathcal{E}_w$\\ 
+Which in natural language means that the energy consumption of mobile web applications differs from the energy consumption of their native mobile counterparts.
+ 
+\textbf{RQ2} - How does the device type (high-end vs low-end) affect the difference in energy consumption between native mobile applications and their mobile  web counterparts?
+
+$H_0^2$ - If we label energy consumption for low end devices as $\mathcal{E}_l$ and  energy consumption for high end devices as $\mathcal{E}_h$, we can define out null hypothesis as follows:
+\newline $H_0^2$        $\mathcal{E}_l  = \mathcal{E}_h$\\
+or "the energy consumption of applications on low-end devices is equal to the energy consumption of applications on high-end devices."
+
+The alternative hypothesis then can be defined as:
+\newline $H_a^2$     $\mathcal{E}_l  \neq  \mathcal{E}_h$\\
+or "the energy consumption of applications on low-end devices differs from the energy consumption of application on high-end devices."
+
+\textcolor{blue}{ To determine possible interaction effects $\mathcal{I}$ for device and application type following hypothesis needs to be answered: 
+Let $\mathcal{I} = (\mathcal{E}_n\mathcal{E}_l - \mathcal{E}_n\mathcal{E}_h)  -  (\mathcal{E}_w\mathcal{E}_l - \mathcal{E}_w\mathcal{E}_h) $  where $\mathcal{E}_n\mathcal{E}_l $ stands for the mean of the group that received $\mathcal{E}_n$ and $\mathcal{E}_l$ and so on. So here we're looking at $(\mathcal{E}_n\mathcal{E}_l - \mathcal{E}_n\mathcal{E}_h)$ which is the effect that device factor is having when we're applying native application. If there is no interaction this should be the same as the device effect is having when we apply web application: $(\mathcal{E}_w\mathcal{E}_l - \mathcal{E}_w\mathcal{E}_h) $. If those are the same then their difference should be 0 so we could use the tests:
+\newline $H_0^3$ -  $\mathcal{I} = 0$
+\newline $H_a^3$ -  $\mathcal{I} \neq 0$
+}

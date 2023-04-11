@@ -1,0 +1,32 @@
+\section{Experiment Planning}\label{sec:planning}
+
+%\begin{itemize}
+	%\item Context Selection
+	\subsection{Context selection}
+The context of the experiment should preferably reflect the real world as much as possible. However, to ensure high external validity within the frames of this project's time scope and feasibility, we decided to narrow our context down to exclusively consider Android devices, specifically the model OnePlus 2. \cite{op2} This model was chosen based on its ability to precisely measure energy consumption and availability to us. Android Runner \cite{androidrunner} is a framework for profiling Android applications, not all devices are compatible with energy profilers used by it under the hood. We also decided to narrow down our browser context to Google Chrome due to its popularity covering 60\% users worldwide.\cite{Chromestats} The definition of the context in our experiment is based on Wohlin et al. dimensions. \cite{wohlin12} There are four dimensions we need to declare.
+%The best context to achieve the most general results from experiment is being executed in large, real software projects with professional numbers. However, because of the time and resources limited in reality, and we also have to consider the cost and risks problems. Same situation happened to our experiment too. We limited the context into Android devices %mobile phone model/
+	\\
+	\subsubsection*{Off-line vs On-line}
+	The experiment will be conducted in an \textbf{offline} situation at Vrije Universiteit Amsterdam Green Lab under a controlled environment. There will be no actual users attending the experiment process. As we mentioned in table~\ref{tab:goal}, we choose 20 mobile applications compatible with Android and Google Chrome.
+	\\
+	\subsubsection*{Students vs Professionals}
+	The experiment will be conducted by four researchers (the authors of this paper) with the professional technical guidance (assistant professor Ivano Malavolta). \textcolor{blue}{Since the applications that are considered in this experiment were made by professional application developers renders this experiment as "\textbf{professional}"}.   
+	\\
+	\subsubsection*{Toy problem vs Real problem}
+	% (Paweł's note: This whole subsubsection seems incorrect to me. We're not really fixing any problem; we're checking whether there is a problem. I rewrote this part to reflect it.)
+	%The experiment aims at fixing a \textbf{real problem}. In our experiment we work on energy efficiency between native mobile applications and mobile web counterparts. The results could provide insight into alternative energy efficient solutions for users and software developers.
+	The experiment aims at researching whether there is a \textbf{real problem}. Our contribution will show whether the common belief about native applications' higher energy consumption can be scientifically proven. A difference in energy consumption can be a good indicator for users caring about battery life of their smartphones. Moreover, if the results indicate a significant difference between native mobile applications and mobile web applications, it could also be an indication for the developers of said applications that research in this area is justified, because there is possibly room for improvement.
+	\\
+	\subsubsection*{Specific vs General}
+	% (Paweł's note: again, we're not going to provide any solutions.)
+	For this experiment, a maximum of two Android devices is used: \textit{one} high-end device and \textit{one} low-end device, and web applications will all run on Google Chrome. Therefore, our experiment is \textbf{specific}. However, our conclusions about the relative energy consumption of the two groups of applications at hand could be applicable in a more general context.
+	\\
+	% justify and evaluate how the experiment should be done, talk about what factors that might influence. offline/online, students/professionals, toy problem/real problem, specific, general 
+	%\item Variable Selection
+	\subsection{Variable Selection}
+	The GQM tree in \autoref{fig:GQMtree} easily visualizes which variables that are being focused on in this experiment. The dependent variable \textit{average energy consumption} is derived from the measurements of \textit{running time} and \textit{energy consumption}. The independent variables are derived from the GQM tree questions (Native \& Web applications) and (High \& Low-end devices).  \textcolor{blue}{As mentioned in \autoref{sec:definition}, the definition of low-end and high-end devices are following the same lines of reasoning as the Mobisoft paper \cite{mobisoft2017}.}
+
+
+%\limit{2}
+
+ 
